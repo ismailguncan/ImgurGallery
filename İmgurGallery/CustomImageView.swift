@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
 
 let imageCache = NSCache<AnyObject, AnyObject>()
 
@@ -15,10 +14,19 @@ class CustomImageView: UIImageView {
     
     var imageUrlString: String? = nil
     
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFill) {
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleToFill) {
         contentMode = mode
 
         imageUrlString = link
+        
+        activityIndicator.center = self.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
         
         guard let url = URL(string: link) else { return }
         
@@ -26,6 +34,7 @@ class CustomImageView: UIImageView {
         
         if let imageFromCache = imageCache.object(forKey: link as AnyObject) as? UIImage {
             self.image = imageFromCache
+            activityIndicator.stopAnimating()
             return
         }
         
@@ -41,8 +50,11 @@ class CustomImageView: UIImageView {
                 
                 if self.imageUrlString == link {
                     self.image = imageToCache
+                    self.activityIndicator.stopAnimating()
                 }
-                imageCache.setObject(imageToCache!, forKey: link as AnyObject)
+                if imageToCache != nil {
+                    imageCache.setObject(imageToCache!, forKey: link as AnyObject)
+                }
             }
             }.resume()
         

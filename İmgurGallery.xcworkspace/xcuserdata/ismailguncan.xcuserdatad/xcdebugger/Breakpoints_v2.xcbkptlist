@@ -26,11 +26,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "I&#x307;mgurGallery/ViewController.swift"
-            timestampString = "521723471.096845"
+            timestampString = "521756322.778635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "fetchMoreImages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "I_mgurGallery.ViewController.fetchMoreImages () -&gt; ()"
+                  moduleName = "I&#x307;mgurGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailguncan/Desktop/I%CC%87mgurGallery/I%CC%87mgurGallery/ViewController.swift"
+                  timestampString = "521755202.3912"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "I_mgurGallery.ViewController.(fetchMoreImages () -&gt; ()).(closure #1)"
+                  moduleName = "I&#x307;mgurGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailguncan/Desktop/I%CC%87mgurGallery/I%CC%87mgurGallery/ViewController.swift"
+                  timestampString = "521755202.394609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&#x307;mgurGallery/ViewController.swift"
+            timestampString = "521755593.689453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "I&#x307;mgurGallery/CustomImageView.swift"
-            timestampString = "521724682.488379"
+            filePath = "I&#x307;mgurGallery/ViewController.swift"
+            timestampString = "521756322.778635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "downloadedFrom(link:contentMode:)"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "fetchMoreImages()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +105,92 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "I&#x307;mgurGallery/CustomImageView.swift"
-            timestampString = "521724682.488379"
+            filePath = "I&#x307;mgurGallery/Operations.swift"
+            timestampString = "521749931.207467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "downloadedFrom(link:contentMode:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getGalleryImages(path:page:showViral:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static I_mgurGallery.Operations.getGalleryImages (path : Swift.String, page : Swift.Optional&lt;Swift.Int&gt;, showViral : Swift.Bool, callback : (Swift.Array&lt;I_mgurGallery.GalleryObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "I&#x307;mgurGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailguncan/Desktop/I%CC%87mgurGallery/I%CC%87mgurGallery/Operations.swift"
+                  timestampString = "521755202.412204"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "143">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static I_mgurGallery.Operations.(getGalleryImages (path : Swift.String, page : Swift.Optional&lt;Swift.Int&gt;, showViral : Swift.Bool, callback : (Swift.Array&lt;I_mgurGallery.GalleryObject&gt;) -&gt; ()) -&gt; ()).(implicit closure #1)"
+                  moduleName = "I&#x307;mgurGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailguncan/Desktop/I%CC%87mgurGallery/I%CC%87mgurGallery/Operations.swift"
+                  timestampString = "521755202.414704"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static I_mgurGallery.Operations.(getGalleryImages (path : Swift.String, page : Swift.Optional&lt;Swift.Int&gt;, showViral : Swift.Bool, callback : (Swift.Array&lt;I_mgurGallery.GalleryObject&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "I&#x307;mgurGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailguncan/Desktop/I%CC%87mgurGallery/I%CC%87mgurGallery/Operations.swift"
+                  timestampString = "521755202.417411"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&#x307;mgurGallery/Operations.swift"
+            timestampString = "521749999.956155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getGalleryImages(path:page:showViral:callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&#x307;mgurGallery/ViewController.swift"
+            timestampString = "521755593.689453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "showViralSwitchAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

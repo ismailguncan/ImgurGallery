@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -17,16 +16,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var currentPage = 1;
     var defaultPath = "hot/top"
-    var isViralShowing = false
+    var isViralShowing = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        
-        layout.itemSize = CGSize(width: 180,height: 180)
-        
-        self.collectionView.setCollectionViewLayout(layout, animated: true)
+//        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+//        
+//        let w = UIScreen.main.bounds.width
+//        if w < 667 {
+//            layout.itemSize = CGSize(width: 275,height: 225)
+//        } else {
+//            layout.itemSize = CGSize(width: 180,height: 180)
+//        }
+//        
+//        self.collectionView.setCollectionViewLayout(layout, animated: true)
         
         Operations.getGalleryImages(path: defaultPath, page: currentPage, showViral: isViralShowing) { (galerryObjects) in
             self.objects = galerryObjects
@@ -36,11 +40,40 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    @IBAction func selectSectionSegmentControlAction(_ sender: Any) {
+    @IBAction func selectSectionSegmentControlAction(_ sender: UISegmentedControl) {
         
-        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            defaultPath = "hot/all"
+            objects?.removeAll()
+            currentPage = 1
+            fetchMoreImages()
+        case 1:
+            defaultPath = "top/all"
+            objects?.removeAll()
+            currentPage = 1
+            fetchMoreImages()
+        default:
+            break
+            
+        }
     }
     
+    @IBAction func showViralSwitchAction(_ sender: UISwitch) {
+        defaultPath = "user/"
+        if sender.isOn {
+            isViralShowing = true
+            objects?.removeAll()
+            currentPage = 1
+            fetchMoreImages()
+        }
+        else {
+            isViralShowing = false
+            objects?.removeAll()
+            currentPage = 1
+            fetchMoreImages()
+        }
+    }
     
     func refresh()
     {
@@ -70,15 +103,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImgurCollectionViewCell
         
-        let object = objects![indexPath.row]
-        
-        cell.imageView.downloadedFrom(link: object.link)
-        
-        
         if let objects = objects, (indexPath.row == objects.count - 2) {
             if objects.count < 55 {
                 fetchMoreImages()
             }
+        }
+        
+        if (objects?.count)! < 5 {
+            fetchMoreImages()
+        }
+        
+        let object = objects![indexPath.row]
+        
+        cell.imageView.downloadedFrom(link: object.link)
+        
+        if !object.descript.isEmpty {
+            cell.descriptionLabel.text = object.descript
+        } else {
+            cell.descriptionLabel.text = "Title: \(object.title)"
         }
         
         return cell

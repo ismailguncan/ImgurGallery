@@ -74,11 +74,11 @@
 				06E0FF5C1F127D1F007A2AEF /* Operations.swift */,
 				06F19D081F119F9B00503C2A /* AppDelegate.swift */,
 				06F19D0A1F119F9B00503C2A /* ViewController.swift */,
+				061605DA1F15800500BBE9AE /* ImgurCollectionViewCell.swift */,
 				06F19D0C1F119F9B00503C2A /* Main.storyboard */,
 				06F19D0F1F119F9B00503C2A /* Assets.xcassets */,
 				06F19D111F119F9B00503C2A /* LaunchScreen.storyboard */,
 				06F19D141F119F9B00503C2A /* Info.plist */,
-				061605DA1F15800500BBE9AE /* ImgurCollectionViewCell.swift */,
 			);
 			path = "İmgurGallery";
 			sourceTree = "<group>";

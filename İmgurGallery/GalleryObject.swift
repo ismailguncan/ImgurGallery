@@ -13,25 +13,25 @@ class GalleryObject: NSObject {
     
     var link: String
     var descript: String
-    var privacy: String
+    var title: String
     
     
     init(json : JSON) {
         link = json["link"].stringValue
         descript = json["description"].stringValue
-        privacy = json["privacy"].stringValue
+        title = json["title"].stringValue
         
     }
     
     init(coder : NSCoder ) {
         link = coder.decodeObject(forKey: "link") as! String
         descript = coder.decodeObject(forKey: "descript") as! String
-        privacy = coder.decodeObject(forKey: "privacy") as! String
+        title = coder.decodeObject(forKey: "title") as! String
     }
     
     func encodeWithCoder (encoder : NSCoder) {
         encoder.encode(link, forKey: "link")
         encoder.encode(descript, forKey: "descript")
-        encoder.encode(privacy, forKey: "privacy")
+        encoder.encode(title, forKey: "title")
     }
 }

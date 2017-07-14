@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>IGListKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>NVActivityIndicatorView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-İmgurGallery.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +22,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>783704336930CCBDCD23106DCA8861B7</key>
+		<key>5D6E4B72EDC30A14310FB7ABA268D1A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +32,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CE1FC57ED556647A09C53464FF9EB5A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8FAB9363A88ECA1925FEDD2F97078B0</key>
+		<key>E7FF1D729B92E1B9419E25D6995E38CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
