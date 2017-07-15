@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     var objects: [GalleryObject]?
+    var activityIndicator: NVActivityIndicatorView?
     
     var currentPage = 1;
     var defaultPath = "hot/top"
@@ -43,6 +45,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func selectSectionSegmentControlAction(_ sender: UISegmentedControl) {
         
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.center.x-60, y: self.view.center.y-60, width: 120, height: 120))
+        activityIndicator?.type = .pacman
+        activityIndicator?.color = UIColor.orange
+        
+        if activityIndicator != nil {
+            self.collectionView.alpha = 0.3
+            self.view.addSubview(activityIndicator!)
+            activityIndicator?.startAnimating()
+        }
+        
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
         switch sender.selectedSegmentIndex {
         case 0:
             defaultPath = "hot/all"
@@ -62,6 +76,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //ShowViral parameters can use with section "USER", so I change the default path before changing the showViral parameters to get more images.
     @IBAction func showViralSwitchAction(_ sender: UISwitch) {
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.center.x-60, y: self.view.center.y-60, width: 120, height: 120))
+        activityIndicator?.type = .pacman
+        activityIndicator?.color = UIColor.orange
+        
+        if activityIndicator != nil {
+            self.collectionView.alpha = 0.3
+            self.view.addSubview(activityIndicator!)
+            activityIndicator?.startAnimating()
+        }
+        
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
         defaultPath = "user/"
         if sender.isOn {
             isViralShowing = true
@@ -134,10 +160,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func fetchMoreImages() {
         Operations.getGalleryImages(path: defaultPath, page: currentPage, showViral: isViralShowing) { (galerryObjects) in
-            
             if galerryObjects.count > 0 {
                 self.objects?.append(contentsOf: galerryObjects)
                 self.currentPage = self.currentPage + 1
+            }
+            if self.activityIndicator != nil {
+                self.activityIndicator?.stopAnimating()
+                self.collectionView.alpha = 1
+                UIApplication.shared.endIgnoringInteractionEvents()
+                self.activityIndicator = nil
             }
             DispatchQueue.main.async(execute: self.refresh)
         }

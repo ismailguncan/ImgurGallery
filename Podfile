@@ -9,5 +9,6 @@ target 'İmgurGallery' do
 
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'NVActivityIndicatorView'
 
 end
