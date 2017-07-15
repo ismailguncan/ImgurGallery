@@ -16,6 +16,7 @@
 		06F19D0E1F119F9B00503C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F19D0C1F119F9B00503C2A /* Main.storyboard */; };
 		06F19D101F119F9B00503C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F19D0F1F119F9B00503C2A /* Assets.xcassets */; };
 		06F19D131F119F9B00503C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F19D111F119F9B00503C2A /* LaunchScreen.storyboard */; };
+		06FA85CC1F19837900501C56 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA85CB1F19837900501C56 /* AboutViewController.swift */; };
 		AFF7487DE81DDA499ECC7795 /* Pods_I_mgurGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DB55D75BB061EEF9C6114B /* Pods_I_mgurGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		06F19D0F1F119F9B00503C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F19D121F119F9B00503C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06F19D141F119F9B00503C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06FA85CB1F19837900501C56 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65DB55D75BB061EEF9C6114B /* Pods_I_mgurGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I_mgurGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DA0E8109722EF26D4085D7 /* Pods-İmgurGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-İmgurGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-İmgurGallery/Pods-İmgurGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		D5D4BF2CF6148BE78AD10897 /* Pods-İmgurGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-İmgurGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-İmgurGallery/Pods-İmgurGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				06F19D0F1F119F9B00503C2A /* Assets.xcassets */,
 				06F19D111F119F9B00503C2A /* LaunchScreen.storyboard */,
 				06F19D141F119F9B00503C2A /* Info.plist */,
+				06FA85CB1F19837900501C56 /* AboutViewController.swift */,
 			);
 			path = "İmgurGallery";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				06F19D0B1F119F9B00503C2A /* ViewController.swift in Sources */,
 				061605DB1F15800500BBE9AE /* ImgurCollectionViewCell.swift in Sources */,
 				06E42E701F181F5400A387D0 /* CustomImageView.swift in Sources */,
+				06FA85CC1F19837900501C56 /* AboutViewController.swift in Sources */,
 				06F19D091F119F9B00503C2A /* AppDelegate.swift in Sources */,
 				06E0FF5D1F127D1F007A2AEF /* Operations.swift in Sources */,
 				06358FD11F1288110098ECA8 /* GalleryObject.swift in Sources */,

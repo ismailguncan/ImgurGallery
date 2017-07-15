@@ -42,4 +42,18 @@ struct Operations {
             
         }
     }
+    
+    static func getVersion() -> String {
+        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            return "No Version Info"
+        }
+        return version
+    }
+    
+    static func getBuildNumber() -> String {
+        guard let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else {
+            return "No Version Info"
+        }
+        return buildNum
+    }
 }

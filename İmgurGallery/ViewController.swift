@@ -21,16 +21,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        
-//        let w = UIScreen.main.bounds.width
-//        if w < 667 {
-//            layout.itemSize = CGSize(width: 275,height: 225)
-//        } else {
-//            layout.itemSize = CGSize(width: 180,height: 180)
-//        }
-//        
-//        self.collectionView.setCollectionViewLayout(layout, animated: true)
+        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        // For Iphone 5, grid view turn to list view.(1 column)
+        let h = UIScreen.main.bounds.height
+        if h < 665 {
+            layout.itemSize = CGSize(width: 275,height: 250)
+        } else {
+            layout.itemSize = CGSize(width: 180,height: 250)
+        }
+        
+        self.collectionView.setCollectionViewLayout(layout, animated: true)
         
         Operations.getGalleryImages(path: defaultPath, page: currentPage, showViral: isViralShowing) { (galerryObjects) in
             self.objects = galerryObjects
@@ -59,6 +60,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    //ShowViral parameters can use with section "USER", so I change the default path before changing the showViral parameters to get more images.
     @IBAction func showViralSwitchAction(_ sender: UISwitch) {
         defaultPath = "user/"
         if sender.isOn {
@@ -84,8 +86,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewWillAppear(animated)
         
     }
-
-    // MARK: let w = UIScreen.mainScreen().bounds.width methods
+    
+    // MARK: Collection View 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -103,20 +105,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImgurCollectionViewCell
         
+        //to fetch more images while scrolling down.
         if let objects = objects, (indexPath.row == objects.count - 2) {
             if objects.count < 55 {
                 fetchMoreImages()
             }
         }
         
+        // Sometimes imgur return less than 5 items, so need to get more new items.
         if (objects?.count)! < 5 {
             fetchMoreImages()
         }
         
         let object = objects![indexPath.row]
         
+        // download the image from URL and cache.
         cell.imageView.downloadedFrom(link: object.link)
         
+        // Set image's description to label.
         if !object.descript.isEmpty {
             cell.descriptionLabel.text = object.descript
         } else {

@@ -21,7 +21,13 @@ class CustomImageView: UIImageView {
 
         imageUrlString = link
         
-        activityIndicator.center = self.center
+        let h = UIScreen.main.bounds.height
+        if h < 665 {
+            activityIndicator.center = CGPoint(x: center.x + 47.5, y: center.y - 70)
+        } else {
+            activityIndicator.center = CGPoint(x: center.x, y: center.y - 70)
+        }
+        
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         self.addSubview(activityIndicator)
