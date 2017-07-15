@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func selectSectionSegmentControlAction(_ sender: UISegmentedControl) {
         
-        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.center.x-60, y: self.view.center.y-60, width: 120, height: 120))
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.collectionView.center.x-60, y: self.collectionView.center.y-60, width: 120, height: 120))
         activityIndicator?.type = .pacman
         activityIndicator?.color = UIColor.orange
         
@@ -76,7 +76,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //ShowViral parameters can use with section "USER", so I change the default path before changing the showViral parameters to get more images.
     @IBAction func showViralSwitchAction(_ sender: UISwitch) {
-        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.center.x-60, y: self.view.center.y-60, width: 120, height: 120))
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.collectionView.center.x-60, y: self.collectionView.center.y-60, width: 120, height: 120))
         activityIndicator?.type = .pacman
         activityIndicator?.color = UIColor.orange
         
